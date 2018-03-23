@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>手机馆</title>
+    <meta name="Keywords"
+          content="靓妆官方网站,靓妆网购,靓妆网,靓妆,靓装,化妆品,网购,网上购物,网上商城,购物网站,女性购物网站,化妆品团购,靓妆直播间,谢小华,韩琳,叶璐,可易,羊胚胎素冻干粉,lzwg.com,靓妆"/>
+    <meta name="Description"
+          content="8倍以上抗衰老，轰动巴黎美博会！全国专业美容护肤电视媒体靓妆频道，独家特供羊胚胎素冷冻原液、人体干细胞、医用级活性胶原等高科技抗衰老护肤精品，轻松实现坐在家里做美容。"/>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--图标网址 http://fontawesome.io/icons/-->
+    <!--<base target="_blank"/>-->
+</head>
+<body>
+<!--这是header 部分-->
+<div class="header-top-inner clearfix">
+    <div class="header-top main-centers clearfix">
+        <form class="fl" name="userlogin" action="{dede:global.cfg_memberurl/}/index_do.php" method="POST">
+            <div class="submit">
+                <button type="submit" class="btn-1">您好！ 请登录</button>
+                <a class="btnz-2" href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+        </form>
+        <ul class="top_right fr clearfix">
+            <li><span style="font-size: 12px;">您好！欢迎来到华强北商城！</span></li>
+            <li><a href="#" class="tr-bgi" style="background: url({dede:global.cfg_templets_skin/}/images/weibo.jpg) no-repeat left;">关注华强北</a></li>
+            <li><a href="#" class="tr-bgi"
+                   style="background:url({dede:global.cfg_templets_skin/}/images/phone.png) no-repeat left; margin-right:0;">华强北客户端</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="header-btm-inner">
+        <div class="header-btm main-centers clearfix">
+            <a href="/" class="logo fl">
+                <img src="{dede:global.cfg_templets_skin/}/images/logo.png" alt="">
+            </a>
+            <div>
+                <div class="cart-section fr">
+                        <span><a class="fa fa-shopping-cart" style="font-size:16px;"
+                                 href="{dede:field name='phpurl'/}/car.php" target="_blank">购物车</a></span>
+                </div>
+                <form  class="search-section info fr clearfix" name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+                    <div class="form">
+                        <input name="q" type="text" class="search-inp search-keyword" id="search-keyword" value="搜索您需要的商品" onfocus="if(this.value=='搜索您需要的商品'){this.value='';}"  onblur="if(this.value==''){this.value='搜索您需要的商品';}" />
+                        <button type="submit" class="search-btn fr search-submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+   <div class="nav-inner">
+       <div class="nav main-centers">
+           <ul class="clearfix">
+           <li><a href='/'><span>首页</span></a></li>
+           {dede:channel row="10" type="top" col="1" currentstyle="<li class='hover'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>" }
+           <li><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+           {/dede:channel}
+               <li class="headerListSprites" style="float: right;"><img src="{dede:global.cfg_templets_skin/}/images/headerListSprites1.png" alt=""></li>
+           </ul>
+       </div>
+   </div>

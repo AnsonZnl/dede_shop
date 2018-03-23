@@ -1,0 +1,44 @@
+{dede:include filename='head.htm'/}
+<div class="banner">
+    <img src="{dede:global.cfg_templets_skin/}/images/banner_bg1.jpg" alt="">
+</div>
+<div class="main">
+    <div class="main-centers main-box">
+        {dede:channel row="1" type="top" col="1" reid="1"}
+        <h2>1F<a href='[field:typeurl/]' [field:rel/]>手机通讯</a></h2>
+        {/dede:channel}
+        <ul class="clearfix">
+            {dede:arclist row="8" typeid="1" titlelen="35" infolen="10" channelid='6' addfields='trueprice,price'}
+            <li>
+                <div class="link_box">
+                    <a href="[field:arcurl/]" class="picBox "><img src="[field:litpic function='firstimg(@me)'/]" alt=""></a>
+                    <div class="link_txt">
+                        <span class="price">￥[field:price/]</span>
+                        <del class="trueprice">市场价￥[field:trueprice/]</del>
+                    </div>
+                    <h3><a href="[field:arcurl/]">[field:title/]</a></h3>
+                </div>
+            </li>
+            {/dede:arclist}
+        </ul>
+    </div>
+    <div class="main-centers main-box">
+        {dede:channel row="1" type="top" col="1" reid="2"}
+        <h2>2F<a href='[field:typeurl/]' [field:rel/]>苹果专区</a></h2>
+        {/dede:channel}
+        <ul class="clearfix">
+            {dede:arclist row="8" typeid="2" titlelen="35" infolen="10" channelid='6' addfields='trueprice,price'}
+            <li>
+                <div class="link_box">
+                    <a href="[field:arcurl/]" class="picBox "><img src="[field:litpic function='firstimg(@me)'/]" alt=""></a>
+                    <div class="link_txt"><span class="price">￥[field:price/]</span>
+                        <del class="trueprice">市场价￥[field:trueprice/]</del>
+                    </div>
+                    <h3><a href="[field:arcurl/]">[field:title/]</a></h3>
+                </div>
+            </li>
+            {/dede:arclist}
+        </ul>
+    </div>
+</div>
+{dede:include filename='footer.htm'/}

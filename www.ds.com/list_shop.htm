@@ -1,0 +1,31 @@
+{dede:include filename='head.htm'/}
+<div class="banner">
+    <img src="{dede:global.cfg_templets_skin/}/images/banner_bg1.jpg" alt="">
+</div>
+<div class="list_shop main-centers">
+    <ul class="clearfix">
+        {dede:list pagesize="12" addfields='trueprice,price'}
+        <li>
+            <a href="[field:arcurl/]" class="picBox "><img src="[field:litpic function='firstimg(@me)'/]" alt=""></a>
+            <h3><a class="" href="[field:arcurl/]" >[field:title/]</a></h3>
+            <div class="link_txt">
+                <span class="price">￥[field:price/]</span>
+                <del class="trueprice">市场价￥[field:trueprice/]</del>
+            </div>
+            <form id="formcar" name="formcar" method="post" action="{dede:field name='phpurl'/}/posttocar.php">
+                <input type="hidden" name="id" value="{dede:field.id/}"/>
+                <input type="hidden" name="title" value="{dede:field.title/}"/>
+                <input type="hidden" name="price" value="{dede:field.trueprice/}"/>
+                <input type="hidden" name="units" value="{dede:field.units/}"/>
+                <button type="submit" name="button" class="btn-2 list_btn-2">放入购物车</button>
+            </form>
+        </li>
+        {/dede:list}
+    </ul>
+</div>
+<div class="pages main-centers">
+    {dede:pagelist istitem="index,pre,next,end,option,info," listsize="5"/}
+</div>
+<p class="main-centers">当前位置： {dede:field name='position'/}</p>
+
+{dede:include filename='footer.htm'/}
